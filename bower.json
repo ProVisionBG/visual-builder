@@ -1,0 +1,21 @@
+{
+  "name": "visual-builder",
+  "authors": [
+    "Venelin Iliev <venelin@provision.bg>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-htmlclean": "^1.4.0",
+    "grid-editor": "^0.2.3"
+  }
+}

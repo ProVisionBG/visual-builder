@@ -1,0 +1,38 @@
+{
+  "version": "0.3.0",
+  "name": "provision/visual-builder",
+  "description": "ProVision Administration visual builder",
+  "keywords": [
+    "provision",
+    "module",
+    "visual builder"
+  ],
+  "license": "Apache License 2.0",
+  "authors": [
+    {
+      "name": "Venelin Iliev",
+      "homepage": "http://veneliniliev.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ProVisionBG/visual-builder/issues",
+    "source": "https://github.com/ProVisionBG/visual-builder"
+  },
+  "homepage": "http://provision.bg",
+  "require": {
+    "provision/administration": "~0.3.0 || dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProVision\\VisualBuilder\\": "."
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "ProVision\\VisualBuilder\\": "."
+    }
+  }
+}
