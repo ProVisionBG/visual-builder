@@ -43,7 +43,6 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Shortcode::register('title', Title::class);
         //$this->app->register(RouteServiceProvider::class);
     }
 }

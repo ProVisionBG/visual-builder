@@ -17,6 +17,7 @@ class VisualBuilderController extends BaseAdministrationController
 {
     public function __construct()
     {
+        \Administration::setTitle('Visual Builder');
         parent::__construct();
     }
 
