@@ -47,20 +47,7 @@
             //valid_col_sizes: [2, 5, 8, 10, 12],
             content_types: ['tinymce'],
             tinymce: {
-                config: {
-                    paste_as_text: true,
-                    plugins: [
-                        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-                        'searchreplace wordcount visualblocks visualchars code fullscreen',
-                        'insertdatetime media nonbreaking save table contextmenu directionality',
-                        'paste textcolor colorpicker textpattern imagetools codesample toc image imagetools'
-                    ],
-                    toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-                    toolbar2: ' media | forecolor backcolor | codesample',
-                    image_advtab: true,
-                    imagetools_proxy: '{{route('provision.administration.tinymce.proxy')}}',
-                    imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions"
-                }
+                config: window.tinymceConfig
             }
         });
 
