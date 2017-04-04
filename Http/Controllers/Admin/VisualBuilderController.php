@@ -24,6 +24,7 @@ class VisualBuilderController extends BaseAdministrationController
     /**
      * Display a listing of the resource.
      *
+     * @param IndexRequest $request
      * @return \Illuminate\Http\Response
      */
     public function index(IndexRequest $request)
@@ -36,11 +37,11 @@ class VisualBuilderController extends BaseAdministrationController
         if (count($fieldArray) == 2) {
             //use languages
             $object = $object->where('id', $request->id)->first()->translate($fieldArray[0]);
-            $content = $object->$fieldArray[1];
+            $content = $object->{$fieldArray[1]};
         } elseif (count($fieldArray) == 1) {
             //without language
             $object = $object->where('id', $request->id)->first();
-            $content = $object->$fieldArray[0];
+            $content = $object->{$fieldArray[0]};
         } else {
             die('field ERROR!!!!');
         }
@@ -64,11 +65,11 @@ class VisualBuilderController extends BaseAdministrationController
         if (count($fieldArray) == 2) {
             //use languages
             $object = $object->where('id', $request->id)->first()->translate($fieldArray[0]);
-            $object->$fieldArray[1] = trim($request->input('content'));
+            $object->{$fieldArray[1]} = trim($request->input('content'));
         } elseif (count($fieldArray) == 1) {
             //without language
             $object = $object->where('id', $request->id)->first();
-            $object->$fieldArray[0] = trim($request->input('content'));
+            $object->{$fieldArray[0]} = trim($request->input('content'));
         } else {
             die('field ERROR!!!!');
         }

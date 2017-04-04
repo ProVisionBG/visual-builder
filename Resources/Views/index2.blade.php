@@ -75,7 +75,14 @@
 @section('content')
     <div class="container">
 
-        <button class="visualBulderSaveButton btn btn-xs btn-success btn-block">Save</button>
+        <div class="row">
+            <div class="col-sm-10">
+                <button class="visualBulderSaveButton btn btn-xs btn-success btn-block">Save</button>
+            </div>
+            <div class="col-sm-2">
+                <a href="{{ URL::previous() }}" class="visualBulderSaveButton btn btn-xs btn-primary btn-block">Back</a>
+            </div>
+        </div>
 
         <div id="myGrid">
 
@@ -83,6 +90,13 @@
 
         </div>
 
-        <button class="visualBulderSaveButton btn btn-xs btn-success btn-block">Save</button>
+        <div class="row">
+            <div class="col-sm-10">
+                <button class="visualBulderSaveButton btn btn-xs btn-success btn-block">Save</button>
+            </div>
+            <div class="col-sm-2">
+                <a href="{{ URL::previous() }}" class="visualBulderSaveButton btn btn-xs btn-primary btn-block">Back</a>
+            </div>
+        </div>
     </div>
 @endsection
