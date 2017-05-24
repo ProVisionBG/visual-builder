@@ -24,14 +24,20 @@
                 [4, 8]
             ],
             row_classes: [
-                {label: 'Example class', cssClass: 'example-class'}
+                {label: 'Container', cssClass: 'container'}
             ],
+            col_classes: [],
             row_tools: [{
                 title: 'Set background image',
                 iconClass: 'glyphicon-picture',
                 on: {
                     click: function () {
-                        $(this).closest('.row').css('background-image', 'url(http://placekitten.com/g/300/300)');
+                        var imageUrl = prompt("Image URL");
+                        if (imageUrl != null) {
+                            $(this).closest('.row').css('background-image', "url('" + imageUrl + "')");
+                        } else {
+                            $(this).closest('.row').css('background-image', 'none');
+                        }
                     }
                 }
             }],
@@ -40,7 +46,12 @@
                 iconClass: 'glyphicon-picture',
                 on: {
                     click: function () {
-                        $(this).closest('.row').css('background-image', 'url(http://placekitten.com/g/300/300)');
+                        var imageUrl = prompt("Image URL");
+                        if (imageUrl != null) {
+                            $(this).closest('.column').css('background-image', "url('" + imageUrl + "')");
+                        } else {
+                            $(this).closest('.column').css('background-image', 'none');
+                        }
                     }
                 }
             }],
