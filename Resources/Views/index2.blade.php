@@ -29,32 +29,61 @@
             col_classes: [],
             row_tools: [{
                 title: 'Set background image',
-                iconClass: 'glyphicon-picture',
+                iconClass: 'fa fa-picture-o',
                 on: {
                     click: function () {
-                        var imageUrl = prompt("Image URL");
+                        var imageUrl = prompt("Image URL", $(this).closest('.row').css('background-image').replace('url(', '').replace(')', '').replace(/\"/gi, ""));
                         if (imageUrl != null) {
                             $(this).closest('.row').css('background-image', "url('" + imageUrl + "')");
                         } else {
-                            $(this).closest('.row').css('background-image', 'none');
+                            $(this).closest('.row').css('background-image', '');
                         }
                     }
                 }
-            }],
+            },
+                {
+                    title: 'Set background color',
+                    iconClass: 'fa fa-eyedropper',
+                    on: {
+                        click: function () {
+                            var color = prompt("Image URL", $(this).closest('.row').css('background-color'));
+                            if (color != null) {
+                                $(this).closest('.row').css('background-color', color);
+                            } else {
+                                $(this).closest('.row').css('background-color', '');
+                            }
+                        }
+                    }
+                }
+            ],
             col_tools: [{
                 title: 'Set background image',
                 iconClass: 'glyphicon-picture',
                 on: {
                     click: function () {
-                        var imageUrl = prompt("Image URL");
+                        var imageUrl = prompt("Image URL", $(this).closest('.column').css('background-image').replace('url(', '').replace(')', '').replace(/\"/gi, ""));
                         if (imageUrl != null) {
                             $(this).closest('.column').css('background-image', "url('" + imageUrl + "')");
                         } else {
-                            $(this).closest('.column').css('background-image', 'none');
+                            $(this).closest('.column').css('background-image', '');
                         }
                     }
                 }
-            }],
+            },
+                {
+                    title: 'Set background color',
+                    iconClass: 'fa fa-eyedropper',
+                    on: {
+                        click: function () {
+                            var color = prompt("Image URL", $(this).closest('.column').css('background-color'));
+                            if (color != null) {
+                                $(this).closest('.column').css('background-color', color);
+                            } else {
+                                $(this).closest('.column').css('background-color', '');
+                            }
+                        }
+                    }
+                }],
             //valid_col_sizes: [2, 5, 8, 10, 12],
             content_types: ['tinymce'],
             tinymce: {
