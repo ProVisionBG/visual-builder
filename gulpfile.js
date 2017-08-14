@@ -25,7 +25,7 @@ var addSassTask = function (src, output, options, useRuby) {
 elixir.extend("publish", function () {
     gulp.task("publish_assets", function () {
         gulp.src("").pipe(shell([
-            "php.exe C:\\Users\\Venko\\PhpstormProjects\\provision-cms-5.3\\artisan vendor:publish --tag=public --tag=views --force"
+            "php.exe F:\\PhpstormProjects\\provision-cms-5.4\\artisan vendor:publish --tag=public --tag=views --force"
         ]));
     });
 });

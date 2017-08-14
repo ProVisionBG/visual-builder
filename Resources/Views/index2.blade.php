@@ -63,7 +63,7 @@
                     click: function () {
                         var imageUrl = prompt("Image URL", $(this).closest('.column').css('background-image').replace('url(', '').replace(')', '').replace(/\"/gi, ""));
                         if (imageUrl != null) {
-                            $(this).closest('.column').css('background-image', "url('" + imageUrl + "')");
+                            $(this).closest('.column').css('background-image', "url(" + imageUrl + ")");
                         } else {
                             $(this).closest('.column').css('background-image', '');
                         }
