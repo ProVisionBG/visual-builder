@@ -33,5 +33,14 @@
     "psr-4": {
       "ProVision\\VisualBuilder\\": "."
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ProVision\\VisualBuilder\\Providers\\ModuleServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
   }
 }
